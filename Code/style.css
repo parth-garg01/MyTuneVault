@@ -17,7 +17,48 @@ nav ul{
     background-color: black;
     color: white;
 }
-
+nav ul li{
+    padding: 0 12px;
+}
 .brand img{
-    width:44px
+    width:44px;
+    padding: 0 8px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+} 
+.container{
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+    font-family: "Varela Round", sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    padding: 34px;
+    background-image: url('../Material/bg.jpg');
+}
+.bottom{
+    position: fixed;
+    height: 130px;
+    background-color: black;    
+    bottom:0;
+    color:white;
+    display: flex;/*Makes the .bottom div a flex container, enabling flexbox layout for its children*/
+    align-items: center; /*Vertically centers all child elements */
+    justify-content: center;/*Horizontally centers all child elements within the .bottom bar.*/
+    flex-direction: column; /*Stacks child elements vertically*/
+}
+.icons{
+    margin-top: 14px;
+}
+.icons i{
+    cursor: pointer;
+}
+#myProgressBar{
+    width: 80vw;
+    text-align: center; 
 }
