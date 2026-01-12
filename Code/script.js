@@ -49,8 +49,11 @@ async function init() {
             supabase = createClient(window.supabaseUrl, window.supabaseKey);
 
             // Fetch Data
+            // Try 'songs' first, if that fails, the error handler below might catch it, 
+            // but since we saw the error "Perhaps you meant 'song'", let's switch to 'song' or try both.
+            // Let's stick to the user's actual table name 'song'.
             const { data, error } = await supabase
-                .from('songs')
+                .from('song')
                 .select('*');
 
             if (error) throw error;
